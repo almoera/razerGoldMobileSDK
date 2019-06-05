@@ -1,0 +1,79 @@
+apply plugin: 'com.android.library'
+
+ext {
+    PUBLISH_GROUP_ID = 'com.razer'
+    PUBLISH_ARTIFACT_ID = 'gold'
+    PUBLISH_VERSION = '0.0.3'
+
+    version = [
+            support_version: '1.0.0'
+    ]
+
+    support = [
+            appcompat   : "androidx.appcompat:appcompat:${version["support_version"]}",
+            material    : "com.google.android.material:material:${version["support_version"]}",
+            cardview    : "androidx.cardview:cardview:${version["support_version"]}",
+            recyclerview: "androidx.recyclerview:recyclerview:${version["support_version"]}",
+    ]
+
+    depend = [
+            mvvmHbit: "com.github.goldze:MVVMHabit:3.1.2"
+    ]
+
+}
+
+
+android {
+    compileSdkVersion 28
+
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+//        //pro环境
+//        release {
+//            buildConfigField("String", "BASE_URL", "\"http://pro.cn\"")
+//        }
+//
+//        //test环境
+//        debug {
+//            minifyEnabled false
+//            buildConfigField("String", "BASE_URL", "\"http://test.cn\"")
+//        }
+    }
+    dataBinding {
+        enabled true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation support.appcompat
+    implementation support.material
+    implementation support.cardview
+    implementation support.recyclerview
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation depend.mvvmHbit
+
+
+}
+
+apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
+
+
+

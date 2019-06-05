@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_recent"
+        android:icon="@android:drawable/ic_dialog_email"
+        android:title="首页" />
+    <item
+        android:id="@+id/menu_recent1"
+        android:icon="@android:drawable/ic_dialog_email"
+        android:title="新闻" />
+    <item
+        android:id="@+id/menu_recent2"
+        android:icon="@android:drawable/ic_dialog_email"
+        android:title="其他" />
+    <item
+        android:id="@+id/menu_recent3"
+        android:icon="@android:drawable/ic_dialog_email"
+        android:title="个人" />
+</menu>
