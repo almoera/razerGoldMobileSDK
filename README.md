@@ -1,3 +1,3 @@
 # razerGoldMobileSDK
 
-[![](https://jitpack.io/v/joyrun/PullUpSwipeRefreshLayout.svg)](https://jitpack.io/#joyrun/PullUpSwipeRefreshLayout)
+[![](https://jitpack.io/v/DengNan51/razerGoldMobileSDK.svg)](https://jitpack.io/#DengNan51/razerGoldMobileSDK)
